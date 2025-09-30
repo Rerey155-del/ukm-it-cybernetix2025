@@ -32,38 +32,6 @@
             <div class="rounded-3xl shadow h-40">
                 <div class="skeleton h-full w-full"></div>
             </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-            <div class="rounded-3xl shadow h-40">
-                <div class="skeleton h-full w-full"></div>
-            </div>
-
-
         </div>
     </div>
 @endsection

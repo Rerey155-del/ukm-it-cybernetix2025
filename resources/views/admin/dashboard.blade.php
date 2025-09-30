@@ -1,4 +1,4 @@
-@extends('admin.layout.dashboard')
+@extends('admin.layout.app')
 
 @section('content')
     <div class="grid grid-rows-2 gap-3 overflow-scroll-auto">
@@ -19,8 +19,7 @@
                 </div>
             </div>
         </div>
-
-
+        
         <!-- Card kecil bawah -->
         <div class="grid grid-cols-3 gap-3">
             <div class="rounded-3xl shadow h-40">

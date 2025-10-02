@@ -9,11 +9,41 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            AOS.init({
+                duration: 800, // durasi animasi
+                once: true, // animasi hanya muncul sekali
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-[#F6F3ED] ">
+<body class="bg-[#F6F3ED]  ">
     <!-- Sticky Header -->
-    <div class="container mx-auto overflow-y-hidden h-screen">
+    <div class="container mx-auto overflow-y-hidden h-screen font-poppins">
         <header class="sticky top-0 z-50 w-full">
             @include('components.header')
         </header>
@@ -25,7 +55,7 @@
             </aside>
 
             <!-- Content -->
-            <main class="flex-1 px-8 overflow-y-auto h-screen">
+            <main class="flex-1 px-8 overflow-y-scroll h-screen">
                 <div id="content" class="gap-4">
                     @yield('content')
                 </div>

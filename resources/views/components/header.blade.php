@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.js"></script>
 </head>
 <body>
-    <header class="container mx-auto card bg-base-100 shadow-md py-4 mb-4 mt-8 rounded-xl">
+    <header class="container mx-auto card bg-base-100 shadow-md py-4 mb-4 mt-8 rounded-3xl">
         <div class=" flex items-center justify-between px-4">
             <div class="flex items-center">
                 <img src="../img/avatar.svg" alt="Logo" class="w-16 h-16">

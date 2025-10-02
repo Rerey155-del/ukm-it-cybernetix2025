@@ -1,12 +1,12 @@
 @extends('admin.layout.app')
 
 @section('content')
-    <div class="grid grid-rows-2 gap-3 overflow-scroll-auto">
+    <div class="grid grid-rows-2 gap-3 overflow-scroll-auto" data-aos="fade-right">
         <!-- Card besar kiri dan kanan -->
         <div class="grid grid-cols-3 gap-3">
             <!-- Card besar kiri -->
             <div class="rounded-3xl shadow col-span-2 h-full">
-                <div class="skeleton h-full w-full flex items-center justify-center">okeee</div>
+                <div class="skeleton h-full w-full flex items-center justify-center">placeholder</div>
             </div>
 
             <!-- Wrapper 2 card kanan -->

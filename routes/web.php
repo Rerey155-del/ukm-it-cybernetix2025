@@ -8,3 +8,7 @@ Route::get('/admin/dashboard', function () {
 Route::get('/admin/anggota', function () {
     return view('admin.anggota');
 });
+Route::get('/admin/absen', function () {
+    return view ('admin.absen');
+});
+    

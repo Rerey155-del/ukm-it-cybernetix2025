@@ -5,7 +5,6 @@
             <h1 class="font-bold text-3xl">Laporan Absen</h1>
         </div>
 
-        <!-- Card kecil 3 kolom -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-[12rem]">
             <div class="card bg-base-100 shadow-lg rounded-3xl ">
                 <div class="card-body">
@@ -21,7 +20,7 @@
                 </div>
             </div>
 
-            {{-- card untuk di tengah --}}
+         
             <div class="card bg-base-100 shadow-lg rounded-3xl ">
                 <div class="card-body">
                     <div class="flex space-x-1">
@@ -91,49 +90,74 @@
     </div>
 
     <script>
-        const ctx = document.getElementById('myChart').getContext('2d');
+        let myChartInstance = null;
 
-        const data = {
-            labels: ['4 September', '11 September', '18 September', '25 September'],
-            datasets: [{
-                    label: 'Hadir',
-                    data: [20, 30, 25, 22],
-                    backgroundColor: '#6EEF77',
-                    borderRadius - top: 20, // biar rounded di atas
-                    borderSkipped: false
-                },
-                {
-                    label: 'Tidak Hadir',
-                    data: [15, 25, 20, 18],
-                    backgroundColor: '#EF796E',
-                    borderSkipped: false
-                }
-            ]
-        };
+        function renderChart() {
+            const ctx = document.getElementById('myChart').getContext('2d');
 
-        const config = {
-            type: 'bar',
-            data: data,
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    x: {
-                        stacked: true
+            const data = {
+                labels: ['4 September', '11 September', '18 September', '25 September'],
+                datasets: [{
+                        label: 'Hadir',
+                        data: [20, 30, 25, 22],
+                        backgroundColor: '#6EEF77',
+
+                        borderSkipped: false
                     },
-                    y: {
-                        stacked: true,
-                        beginAtZero: true
+                    {
+                        label: 'Tidak Hadir',
+                        data: [15, 25, 20, 18],
+                        backgroundColor: '#EF796E',
+
+                        borderSkipped: false
                     }
-                },
-                plugins: {
-                    legend: {
-                        display: false // kalau mau tanpa legend
+                ]
+            };
+
+            const config = {
+                type: 'bar',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            stacked: true
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
                     }
                 }
-            },
-        };
+            };
 
-        new Chart(ctx, config);
+            if (myChartInstance) {
+                myChartInstance.destroy();
+            }
+
+            myChartInstance = new Chart(ctx, config);
+        }
+
+        // render saat pertama kali load
+        document.addEventListener("DOMContentLoaded", () => {
+            renderChart();
+        });
+
+        // toggle sidebar
+        document.getElementById("toggleSidebar").addEventListener("click", function() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("-translate-x-full");
+
+            // render ulang chart biar ukurannya menyesuaikan layout
+            setTimeout(() => {
+                renderChart();
+            }, 300); // kasih delay sedikit biar sidebar selesai animasi
+        });
     </script>
 @endsection

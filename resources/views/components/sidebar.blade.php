@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<aside class="card flex flex-col bg-base-100 shadow-md card-sm h-[30rem] rounded-3xl">
+<aside id="sidebar" class="card flex flex-col bg-base-100 shadow-md card-sm h-[30rem] rounded-3xl">
 
     <div class="card-body">
         <br>
@@ -24,7 +24,7 @@
         </div>
         <br>
         <div>
-            <a href="/admin/absen" class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[#FF7543] rounded-xl">
+            <a href="/admin/absen" id="toogleSidebar" class="flex items-center gap-2 py-2 px-3 rounded hover:bg-[#FF7543] rounded-xl">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                     <g fill="none">
                         <path

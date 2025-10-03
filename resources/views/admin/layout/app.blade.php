@@ -55,7 +55,7 @@
             </aside>
 
             <!-- Content scrollable -->
-            <main class="flex-1 px-8 overflow-y-auto">
+            <main class="flex-1 px-8 overflow-y-scroll">
                 <div id="content" class="gap-4 py-4">
                     @yield('content')
                 </div>

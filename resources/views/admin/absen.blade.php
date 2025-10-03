@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <div class="flex space-x-1">
                         <img src="/img/cloud.png" alt="Database Icon" class="w-8 h-8">
-                        <h2 class="card-title justify-start font-semibold">Total anggota Aktif</h2>
+                        <h2 class="card-title justify-start font-semibold">adit ganteng</h2>
                     </div>
                     <div class="mx-auto flex justify-center items-center">
                         <p class="mt-4 font-bold text-4xl">

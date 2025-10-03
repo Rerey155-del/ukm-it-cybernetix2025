@@ -1,17 +1,17 @@
 @extends('admin.layout.app')
 @section('content')
-    <div class="grid gap-6" data-aos="fade-right">
+    <div class="grid gap-5" data-aos="fade-right">
         <div class="flex justify-between items-center">
-            <h1 class="font-bold ">Laporan Absen</h1>
+            <h1 class="font-bold text-3xl">Laporan Absen</h1>
         </div>
 
         <!-- Card kecil 3 kolom -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 ">
-            <div class="card bg-base-100 shadow-lg rounded-3xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-[12rem]">
+            <div class="card bg-base-100 shadow-lg rounded-3xl ">
                 <div class="card-body">
                     <div class="flex space-x-1">
                         <img src="/img/cloud.png" alt="Database Icon" class="w-8 h-8">
-                        <h2 class="card-title justify-start font-semibold">Divisi Networking</h2>
+                        <h2 class="card-title justify-start font-semibold">Total anggota Aktif</h2>
                     </div>
                     <div class="mx-auto flex justify-center items-center">
                         <p class="mt-4 font-bold text-4xl">
@@ -22,11 +22,11 @@
             </div>
 
             {{-- card untuk di tengah --}}
-            <div class="card bg-base-100 shadow-lg rounded-3xl">
+            <div class="card bg-base-100 shadow-lg rounded-3xl ">
                 <div class="card-body">
                     <div class="flex space-x-1">
                         <img src="/img/device.png" alt="Database Icon" class="w-8 h-8">
-                        <h2 class="card-title justify-start font-semibold">Divisi Programming</h2>
+                        <h2 class="card-title justify-start font-semibold">Total Anggota hadir</h2>
                     </div>
                     <div class="mx-auto flex justify-center items-center">
                         <p class="mt-4 font-bold text-4xl">
@@ -40,7 +40,7 @@
                 <div class="card-body">
                     <div class="flex space-x-1">
                         <img src="/img/paint.png" alt="Database Icon" class="w-8 h-8">
-                        <h2 class="card-title justify-start font-semibold">Divisi Multimedia</h2>
+                        <h2 class="card-title justify-start font-semibold">Total Anggota Tidak Hadir</h2>
                     </div>
                     <div class="mx-auto flex justify-center items-center">
                         <p class="mt-4 font-bold text-4xl">
@@ -96,22 +96,19 @@
         const data = {
             labels: ['4 September', '11 September', '18 September', '25 September'],
             datasets: [{
-                label: 'Jumlah Absen',
-                data: [20, 67, 40, 30],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(255, 206, 86, 0.6)',
-                    'rgba(75, 192, 192, 0.6)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',    
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)'
-                ],
-                borderWidth: 1
-            }]
+                    label: 'Hadir',
+                    data: [20, 30, 25, 22],
+                    backgroundColor: '#6EEF77',
+                    borderRadius - top: 20, // biar rounded di atas
+                    borderSkipped: false
+                },
+                {
+                    label: 'Tidak Hadir',
+                    data: [15, 25, 20, 18],
+                    backgroundColor: '#EF796E',
+                    borderSkipped: false
+                }
+            ]
         };
 
         const config = {
@@ -121,8 +118,17 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
+                    x: {
+                        stacked: true
+                    },
                     y: {
+                        stacked: true,
                         beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false // kalau mau tanpa legend
                     }
                 }
             },

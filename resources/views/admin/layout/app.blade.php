@@ -41,22 +41,22 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-[#F6F3ED]  ">
-    <!-- Sticky Header -->
-    <div class="container mx-auto overflow-y-hidden h-screen font-poppins">
+<body class="bg-[#F6F3ED]">
+    <div class="container mx-auto h-screen flex flex-col">
         <header class="sticky top-0 z-50 w-full">
             @include('components.header')
         </header>
 
-        <div class="flex">
-            <!-- Sidebar -->
-            <aside id="app-content" class="sticky top-4rem w-[220px]">
+        <!-- Flex: Sidebar + Content -->
+        <div class="flex flex-1 overflow-hidden">
+            <!-- Sidebar tetap di kiri -->
+            <aside class="w-[220px]">
                 @include('components.sidebar')
             </aside>
 
-            <!-- Content -->
-            <main class="flex-1 px-8 overflow-y-scroll h-screen">
-                <div id="content" class="gap-4">
+            <!-- Content scrollable -->
+            <main class="flex-1 px-8 overflow-y-auto">
+                <div id="content" class="gap-4 py-4">
                     @yield('content')
                 </div>
             </main>

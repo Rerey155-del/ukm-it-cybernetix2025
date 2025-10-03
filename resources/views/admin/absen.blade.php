@@ -2,7 +2,7 @@
 @section('content')
     <div class="grid gap-5" data-aos="fade-right">
         <div class="flex justify-between items-center">
-            <h1 class="font-bold text-3xl">Laporan Absen</h1>
+            <h1 class="font-bold text-3xl">Laporan saja</h1>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-[12rem]">
